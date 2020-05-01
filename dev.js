@@ -1,0 +1,1 @@
+const ScheduleFox = require('./index');

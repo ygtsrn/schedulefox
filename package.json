@@ -1,0 +1,36 @@
+{
+  "name": "schedulefox",
+  "version": "1.0.0",
+  "description": "ScheduleFox is lightweight job scheduling for Node.js with MongoDb.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygtsrn/schedulefox.git"
+  },
+  "keywords": [
+    "schedule",
+    "job",
+    "mongo",
+    "mongodb",
+    "cron",
+    "cron job",
+    "tasks",
+    "timed tasks"
+  ],
+  "author": "ygtsrn",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ygtsrn/schedulefox/issues"
+  },
+  "homepage": "https://github.com/ygtsrn/schedulefox#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "events": "^3.1.0",
+    "mongodb": "^3.5.7"
+  }
+}
