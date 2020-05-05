@@ -3,10 +3,17 @@ const mongoUri = '';
 
 const schedulefox = new ScheduleFox({config: {uri: mongoUri}});
 
- let jobData01 = { JobName: "JobName-Test-09", TimePattern: "10 Minute" };
+let jobData01 = { JobName: "JobName-Test-03", TimePattern: "5 Minute" };
 
-schedulefox.create(jobData01, async x => {
-    console.log(x);
-});
 
-// schedulefox.start();
+(async function() {
+
+    let testJobs01 = await schedulefox.create(jobData01);
+    // console.log(testJobs01);
+    await schedulefox.start();
+
+})();
+
+
+
+
