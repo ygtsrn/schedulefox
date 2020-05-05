@@ -1,18 +1,12 @@
 const ScheduleFox = require('./lib');
-const mongoUri = 'mongodb+srv://admin:admin@cluster0-hyavj.gcp.mongodb.net/ScheduleFox';
+const mongoUri = '';
 
 const schedulefox = new ScheduleFox({config: {uri: mongoUri}});
 
- data = {
-        JobName: "JobName-Test-02",
-        TimePattern: "*/15 * * * * *"
-    };
+ let jobData01 = { JobName: "JobName-Test-09", TimePattern: "10 Minute" };
 
-schedulefox.create(data);
+schedulefox.create(jobData01, async x => {
+    console.log(x);
+});
 
-// schedulefox.dbService.prototype
-
-// schedulefox.context.prototype.mongoService.
-
-// schedulefox.
-
+// schedulefox.start();
