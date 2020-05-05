@@ -4,8 +4,8 @@ const mongoUri = 'mongodb+srv://admin:admin@cluster0-hyavj.gcp.mongodb.net/Sched
 const schedulefox = new ScheduleFox({config: {uri: mongoUri}});
 
  data = {
-        JobName: "JobName-Test-01",
-        TimePattern: "*/10 * * * * *"
+        JobName: "JobName-Test-02",
+        TimePattern: "*/15 * * * * *"
     };
 
 schedulefox.create(data);
