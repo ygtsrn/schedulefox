@@ -1,5 +1,5 @@
 const ScheduleFox = require('./lib');
-const mongoUri = '';
+const mongoUri = 'mongodb+srv://.mongodb.net/ScheduleFox';
 
 const schedulefox = new ScheduleFox({config: {uri: mongoUri}});
 
@@ -26,14 +26,16 @@ function resolveJobTwo() {
 }
 
 schedulefox.on('JobName-Test-01', async function (arg) {
-    console.log(arg)
+    // console.log(arg)
     let result = await resolveJobOne();
+    await schedulefox.finish('JobName-Test-01', result);
     console.log(result);
 });
 
 schedulefox.on('JobName-Test-02', async function (arg) {
-    console.log(arg)
+    // console.log(arg)
     let result = await resolveJobTwo();
+    await schedulefox.finish('JobName-Test-02', result);
     console.log(result);
 });
 
