@@ -1,5 +1,5 @@
 const ScheduleFox = require('./lib');
-const mongoUri = 'mongodb+srv://.mongodb.net/ScheduleFox';
+const mongoUri = 'mongodb+srv://mongodb.net/ScheduleFox';
 
 const schedulefox = new ScheduleFox({config: {uri: mongoUri}});
 
@@ -46,7 +46,7 @@ schedulefox.on('JobName-Test-02', async function (arg) {
     // let testJobs03 = await schedulefox.create(jobData03);
     // let testJobs04 = await schedulefox.create(jobData04);
     // console.log(testJobs01);
-    await schedulefox.start();
+    await schedulefox.start({ Immediately: true, QueueReprocessing: 2 });
 
 })();
 
